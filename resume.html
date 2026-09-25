@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaviya R — Resume</title>
+<style>
+  :root{
+    --bg:#0B1220;
+    --panel:#111a2e;
+    --text:#e7ecf5;
+    --muted:#9aa7bd;
+    --accent:#5ea1ff;
+    --border:#22304a;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;
+  }
+  .wrap{
+    max-width:780px;
+    margin:0 auto;
+    padding:48px 24px 80px;
+  }
+  h1{
+    font-size:2rem;
+    margin:0 0 4px;
+    color:#fff;
+  }
+  .role{
+    font-size:1.05rem;
+    color:var(--accent);
+    margin:0 0 4px;
+  }
+  .contact{
+    color:var(--muted);
+    font-size:0.92rem;
+    margin:2px 0;
+  }
+  .contact a, p a{
+    color:var(--accent);
+    text-decoration:none;
+  }
+  .contact a:hover, p a:hover{
+    text-decoration:underline;
+  }
+  h2{
+    font-size:1.15rem;
+    color:#fff;
+    border-bottom:1px solid var(--border);
+    padding-bottom:6px;
+    margin:36px 0 14px;
+    letter-spacing:0.02em;
+    text-transform:uppercase;
+    font-size:0.95rem;
+    color:var(--accent);
+  }
+  h3{
+    font-size:1rem;
+    color:#fff;
+    margin:20px 0 8px;
+  }
+  h3 a{
+    color:var(--accent);
+    font-weight:400;
+    font-size:0.88rem;
+    text-decoration:none;
+    margin-left:6px;
+  }
+  ul{
+    margin:6px 0 0;
+    padding-left:20px;
+  }
+  li{
+    margin-bottom:6px;
+    color:#d6dcea;
+    font-size:0.95rem;
+  }
+  li p{margin:0;}
+  p{margin:6px 0;}
+  .print-btn{
+    position:fixed;
+    top:20px;
+    right:20px;
+    background:var(--accent);
+    color:#0B1220;
+    border:none;
+    padding:8px 16px;
+    border-radius:6px;
+    font-weight:600;
+    cursor:pointer;
+    font-size:0.85rem;
+  }
+  @media print{
+    .print-btn{display:none;}
+    body{background:#fff;color:#000;}
+    .wrap{max-width:100%;}
+  }
+  @media (max-width:600px){
+    .wrap{padding:32px 16px 60px;}
+    h1{font-size:1.6rem;}
+  }
+</style>
+</head>
+<body>
+<button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+<div class="wrap">
+<h1 id="kaviya-r">Kaviya R</h1>
+<p class="role">Frontend Developer</p>
+<p class="contact">Coimbatore, Tamil Nadu, India</p>
+<p class="contact">Phone: 6379344240 · <a href="mailto:kaviyaramanathan587@gmail.com">kaviyaramanathan587@gmail.com</a></p>
+<p class="contact"><a href="https://linkedin.com/in/kaviya0253">LinkedIn</a> · <a href="https://github.com/Kaviya0253">GitHub</a> · <a href="https://kaviya0253.github.io/portfolio">Portfolio</a></p>
+
+<h2 id="summary">Summary</h2>
+<p>Frontend developer who has built React applications from the ground up: Go_Transit, a real-time bus tracker with a live Express/Firebase backend, and JiraWay, a Jira learning platform designed to be intuitive for people using Jira for the first time. MCA graduate (Bharathiar University) seeking a Frontend Software Engineer role.</p>
+
+<h2 id="projects">Projects</h2>
+<h3 id="jiraway">JiraWay <a href="https://github.com/Kaviya0253/JiraWay">GitHub</a> · <a href="https://jira-way.vercel.app">Live Demo</a></h3>
+<ul>
+<li><p>Noticed most Jira tutorials only explain the tool, not let you practice it — so built a hands-on learning platform where beginners work inside a real, interactive ticket board instead</p></li>
+<li><p>One ticket runs through all 5 modules — orientation, creating issues, updating progress, boards &amp; sprints, backlog planning — giving learners a full sprint from start to finish</p></li>
+<li><p>Built a fully interactive board — drag-and-drop tickets, subtasks, comments, priorities, story points, epics and sprints — all managed client-side with localStorage persistence</p></li>
+<li><p>Wrote a detailed README covering the problem, features, and architecture for anyone reviewing the project</p></li>
+<li><p>Stack: React, Vite, Tailwind CSS</p></li>
+</ul>
+
+<h3 id="gotransit">Go_Transit <a href="https://github.com/Kaviya0253/Go_Transit">GitHub</a> · <a href="https://gotransit-iota.vercel.app">Live Demo</a></h3>
+<ul>
+<li><p>Noticed commuters waiting for a bus have no way to know exactly where it is or when it'll arrive — so built a real-time tracker showing live position, ETA, distance and speed on Google Maps, searchable by bus number or stop</p></li>
+<li><p>Built a REST API with Express simulating realistic GPS bus movement, streaming live position to Firebase every 2 seconds</p></li>
+<li><p>Documented the backend architecture and known limitations in the README</p></li>
+<li><p>Stack: React, React Router, Google Maps API, Node.js/Express, Firebase Realtime Database</p></li>
+</ul>
+
+<h2 id="skills">Skills</h2>
+<ul>
+<li><p>Core: React, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Bootstrap, Vite</p></li>
+<li><p>Familiar with: Node.js, Express, REST APIs, Firebase, MongoDB, SQL, React Router, Google Maps API, Git/GitHub, Agile methodology</p></li>
+</ul>
+
+<h2 id="certifications">Certifications</h2>
+<ul>
+<li><p>Introduction to Front-End Development — Meta (Coursera), 2023</p></li>
+<li><p>Get Started with Figma — Coursera, 2023</p></li>
+<li><p>Cypress UI Automation Testing — Coursera Project Network, 2025</p></li>
+<li><p>Data Analysis and Visualization with Power BI — Microsoft (Coursera), 2024</p></li>
+</ul>
+
+<h2 id="education">Education</h2>
+<ul>
+<li><p>Bharathiar University — Master of Computer Applications (MCA), 2023–2025, CGPA 8.64/10</p></li>
+<li><p>Gobi Arts and Science College — B.Sc. Physics, 2020–2023, CGPA 8.42/10</p></li>
+</ul>
+
+<h2 id="experience">Experience</h2>
+<ul>
+<li><p>Senior Process Associate, Innoura Technologies — Jun 2025–Jun 2026</p></li>
+<li><p>Annotated LiDAR 3D point cloud data using 3D bounding boxes, following detailed project guidelines and maintaining high accuracy and consistency</p></li>
+</ul>
+
+</div>
+</body>
+</html>
