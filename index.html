@@ -535,6 +535,7 @@
             <a href="https://jira-way.vercel.app" target="_blank" rel="noopener">Live demo ↗</a>
             <a href="https://github.com/Kaviya0253/JiraWay" target="_blank" rel="noopener">Source ↗</a>
             <button type="button" class="watch-video-trigger" data-gallery-target="jira">Watch a module ▶</button>
+          <button type="button" class="watch-video-trigger" data-gallery-target="jira" data-video-src="assets/video/jiraway-testcase.mp4">Watch test demo ▶</button>
           </div>
         </div>
       </article>
@@ -781,7 +782,7 @@
         if(prev) prev.hidden = true;
         if(next) next.hidden = true;
       }
-      galleries[id] = { showVideo: showVideo };
+      galleries[id] = { showVideo: showVideo, tabs: moduleTabBtns };
     });
 
     document.querySelectorAll('.watch-video-trigger').forEach(function(link){
@@ -790,8 +791,7 @@
         var target = link.getAttribute('data-gallery-target');
         var gallery = galleries[target];
         if(gallery){
-          gallery.showVideo();
-        }
+          gallery.showVideo(); var vs = link.getAttribute('data-video-src'); if(vs && gallery.tabs){ gallery.tabs.forEach(function(t){ if(t.getAttribute('data-src') === vs) t.click(); }); } }
       });
     });
   })();
