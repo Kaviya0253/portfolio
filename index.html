@@ -503,7 +503,6 @@
             <button class="shot-module-tab" data-src="assets/video/jiraway-module-3.mp4">3</button>
             <button class="shot-module-tab" data-src="assets/video/jiraway-module-4.mp4">4</button>
             <button class="shot-module-tab" data-src="assets/video/jiraway-module-5.mp4">5</button>
-            <button class="shot-module-tab shot-tab-wide" data-src="assets/video/jiraway-testcase.mp4" aria-label="Cypress test demo">Tests</button>
           </div>
           <button class="shot-back" aria-label="Back to screenshots">‹ Screenshots</button>
           <button class="shot-arrow shot-prev" aria-label="Previous screenshot">‹</button>
@@ -535,7 +534,7 @@
             <a href="https://jira-way.vercel.app" target="_blank" rel="noopener">Live demo ↗</a>
             <a href="https://github.com/Kaviya0253/JiraWay" target="_blank" rel="noopener">Source ↗</a>
             <button type="button" class="watch-video-trigger" data-gallery-target="jira">Watch a module ▶</button>
-          <button type="button" class="watch-video-trigger" data-gallery-target="jira" data-video-src="assets/video/jiraway-testcase.mp4">Watch test demo ▶</button>
+          <button type="button" class="watch-video-trigger" data-gallery-target="jira" data-video-src="assets/video/jiraway-testcase.mp4">Watch test case demo ▶</button>
           </div>
         </div>
       </article>
@@ -782,7 +781,7 @@
         if(prev) prev.hidden = true;
         if(next) next.hidden = true;
       }
-      galleries[id] = { showVideo: showVideo, tabs: moduleTabBtns };
+      galleries[id] = { showVideo: showVideo, playOnly: function(src){ if(video){ video.src = src; video.play().catch(function(){}); } if(moduleTabs) moduleTabs.classList.remove('active'); }, restoreTabs: function(){ if(moduleTabs) moduleTabs.classList.add('active'); var act = moduleTabBtns.filter(function(t){ return t.classList.contains('active'); })[0] || moduleTabBtns[0]; if(video && act && video.getAttribute('src') !== act.getAttribute('data-src')){ video.src = act.getAttribute('data-src'); video.play().catch(function(){}); } } };
     });
 
     document.querySelectorAll('.watch-video-trigger').forEach(function(link){
@@ -791,7 +790,7 @@
         var target = link.getAttribute('data-gallery-target');
         var gallery = galleries[target];
         if(gallery){
-          gallery.showVideo(); var vs = link.getAttribute('data-video-src'); if(vs && gallery.tabs){ gallery.tabs.forEach(function(t){ if(t.getAttribute('data-src') === vs) t.click(); }); } }
+          gallery.showVideo(); var vs = link.getAttribute('data-video-src'); if(vs){ gallery.playOnly(vs); } else { gallery.restoreTabs(); } }
       });
     });
   })();
