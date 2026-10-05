@@ -81,6 +81,7 @@
     font-size:0.95rem;
   }
   li p{margin:0;}
+  code{font-family:Consolas,Menlo,monospace;font-size:0.9em;}
   p{margin:6px 0;}
   .print-btn{
     position:fixed;
@@ -116,51 +117,53 @@
 <p class="contact"><a href="https://linkedin.com/in/kaviya0253">LinkedIn</a> · <a href="https://github.com/Kaviya0253">GitHub</a> · <a href="https://kaviya0253.github.io/portfolio">Portfolio</a></p>
 
 <h2 id="summary">Summary</h2>
-<p>Frontend developer who has built React applications from the ground up: Go_Transit, a real-time bus tracker with a live Express/Firebase backend, and JiraWay, a Jira learning platform designed to be intuitive for people using Jira for the first time. MCA graduate (Bharathiar University) seeking a Frontend Software Engineer role.</p>
+<p>Frontend developer who has built two React applications: Go_Transit, a real-time bus tracker with a live Express/Firebase backend, and JiraWay, a Jira learning platform designed to be intuitive for people using Jira for the first time. MCA graduate (Bharathiar University) seeking an entry-level Frontend Software Engineer role.</p>
 
 <h2 id="projects">Projects</h2>
 <h3 id="jiraway">JiraWay <a href="https://github.com/Kaviya0253/JiraWay">GitHub</a> · <a href="https://jira-way.vercel.app">Live Demo</a></h3>
+<p><em>Noticed most Jira tutorials explain the tool but don't let you practice it, so built a hands-on learning platform where beginners work inside an interactive Jira-style ticket board instead.</em></p>
 <ul>
-<li><p>Noticed most Jira tutorials only explain the tool, not let you practice it — so built a hands-on learning platform where beginners work inside a real, interactive ticket board instead</p></li>
-<li><p>One ticket runs through all 5 modules — orientation, creating issues, updating progress, boards &amp; sprints, backlog planning — giving learners a full sprint from start to finish</p></li>
-<li><p>Built a fully interactive board — drag-and-drop tickets, subtasks, comments, priorities, story points, epics and sprints — with each learner's progress scoped to their name and email in localStorage, so multiple people can share the same browser without overwriting each other's work</p></li>
-<li><p>Wrote 6 Cypress end-to-end tests covering login, logout, ticket creation, form validation, data persistence and filtering, with HTML test reports</p></li>
+<li><p>Designed 5 modules (orientation, creating issues, updating progress, boards &amp; sprints, backlog planning) that take one ticket through a full sprint.</p></li>
+<li><p>Built an interactive board with drag-and-drop tickets, subtasks, comments, priorities, story points, epics and sprints.</p></li>
+<li><p>Built a custom React hook (<code>useTicketStore</code>) to manage ticket, sprint and board state, with drag-and-drop updates persisted in <code>localStorage</code>, using only React's built-in hooks.</p></li>
+<li><p>Scoped each learner's progress to their name and email in <code>localStorage</code>, so multiple people can share the same browser without overwriting each other's work.</p></li>
+<li><p>Wrote 6 Cypress end-to-end tests covering login, logout, ticket creation, form validation, data persistence and filtering, with HTML test reports.</p></li>
 <li><p>Stack: React, Vite, Tailwind CSS, Cypress</p></li>
 </ul>
 
 <h3 id="gotransit">Go_Transit <a href="https://github.com/Kaviya0253/Go_Transit">GitHub</a> · <a href="https://gotransit-iota.vercel.app">Live Demo</a></h3>
+<p><em>Noticed commuters waiting for a bus have no way to know exactly where it is or when it'll arrive, so built a mobile-responsive real-time tracker with a simulated GPS feed, showing live position, ETA, distance and speed on Google Maps, searchable by bus number or stop.</em></p>
 <ul>
-<li><p>Noticed commuters waiting for a bus have no way to know exactly where it is or when it'll arrive — so built a real-time tracker showing live position, ETA, distance and speed on Google Maps, searchable by bus number or stop</p></li>
-<li><p>Built a REST API with Express simulating realistic GPS bus movement, streaming live position to Firebase every 2 seconds</p></li>
-<li><p>Built a live-status indicator (Live / Delayed / Signal Lost) that reflects actual data freshness, and handled the backend's slow cold-start on free hosting with an extended timeout and loading state</p></li>
+<li><p>Built a Node.js/Express search API (<code>GET /search</code>) and a bus simulator that streams GPS positions to Firebase every 2 seconds.</p></li>
+<li><p>Added a live-status indicator (Live / Delayed / Signal Lost) that reflects actual data freshness, and handled the backend's slow cold start on free hosting with an extended timeout and a loading state.</p></li>
+<li><p>Set up continuous deployment: Vercel auto-deploys the live site on every push to GitHub.</p></li>
 <li><p>Stack: React, React Router, Google Maps API, Node.js/Express, Firebase Realtime Database</p></li>
 </ul>
 
 <h2 id="skills">Skills</h2>
 <ul>
-<li><p>Core: React, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Bootstrap, Vite</p></li>
-<li><p>Testing: Cypress (end-to-end)</p></li>
-<li><p>Familiar with: Node.js, Express, REST APIs, Firebase, MongoDB, SQL, React Router, Google Maps API, Git/GitHub, Agile methodology</p></li>
-</ul>
-
-<h2 id="certifications">Certifications</h2>
-<ul>
-<li><p>Introduction to Front-End Development — Meta (Coursera), 2023</p></li>
-<li><p>Get Started with Figma — Coursera, 2023</p></li>
-<li><p>Cypress UI Automation Testing — Coursera Project Network, 2025</p></li>
-<li><p>Data Analysis and Visualization with Power BI — Microsoft (Coursera), 2024</p></li>
+<li><p><strong>Core:</strong> React, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Bootstrap, Vite, React Router, responsive UI development, Git/GitHub, npm</p></li>
+<li><p><strong>Testing:</strong> Cypress (end-to-end)</p></li>
+<li><p><strong>Familiar with:</strong> Node.js, Express, REST APIs, Firebase, MongoDB, SQL, Google Maps API, Agile methodology</p></li>
 </ul>
 
 <h2 id="education">Education</h2>
 <ul>
-<li><p>Bharathiar University — Master of Computer Applications (MCA), 2023–2025, CGPA 8.64/10</p></li>
-<li><p>Gobi Arts and Science College — B.Sc. Physics, 2020–2023, CGPA 8.42/10</p></li>
+<li><p>Bharathiar University, Master of Computer Applications (MCA), 2023–2025, CGPA 8.64/10</p></li>
+<li><p>Gobi Arts and Science College, B.Sc. Physics, 2020–2023, CGPA 8.42/10</p></li>
 </ul>
 
 <h2 id="experience">Experience</h2>
+<p><strong>Senior Process Associate</strong>, Innoura Technologies | Jun 2025 – Jun 2026</p>
 <ul>
-<li><p>Senior Process Associate, Innoura Technologies — Jun 2025–Jun 2026</p></li>
-<li><p>Annotated LiDAR 3D point cloud data using 3D bounding boxes, following detailed project guidelines and maintaining high accuracy and consistency</p></li>
+<li><p>Annotated LiDAR 3D point cloud data using 3D bounding boxes, following detailed project guidelines and maintaining high accuracy and consistency.</p></li>
+</ul>
+
+<h2 id="certifications">Certifications</h2>
+<ul>
+<li><p>Introduction to Front-End Development, Meta (Coursera), 2023</p></li>
+<li><p>Get Started with Figma, Coursera, 2023</p></li>
+<li><p>Cypress UI Automation Testing, Coursera Project Network, 2025</p></li>
 </ul>
 
 </div>
